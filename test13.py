@@ -1,4 +1,4 @@
-def func(a,b=20,c=40):
+def func(a,b=40,c=20):
  print 'a is',a ,'and b is',b ,'and c is',c
 func(3,7)
 func(25,c=44)
