@@ -1,4 +1,4 @@
-x = 50
+x = 10
 def func():
  global x
 
