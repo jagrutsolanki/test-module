@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+	<!-- loan tree view -->
+
+<record id='loan_loan_tree' model='ir.ui.view'>
+<field name='name'>loan.result.tree</field>
+<field name='model'>cus.registration</field>
+<field name='type'>tree</field>
+<field name='arch' type='xml'>
+    <tree string="loan_result">
+
+    <label for="loan"/>
+        <field name="name"/>
+	    <field name="contno"/>
+	    <field name="age"/>
+	    <field name="dob"/>
+	    <field name="Registrationdate"/>
+	     <field name="Registrationfee"/>  
+	     <field name = "state"/>
+	     <field name="gender"/>
+	     <field name="add"/>
+	 
+	     
+    </tree>
+</field>
+</record>
+
+    
+<!--loan Form View-->
+
+<record id='loan_loan_form' model='ir.ui.view'>
+<field name="name">loan.result.form</field>
+<field name="model">cus.registration</field>
+<field name="type">form</field>
+<field name="arch" type="xml">
+    <form string="loan_result" Version="7.0">
+          <field name="name"/>
+	    <field name="contno"/>
+	    <field name="age"/>
+	    <field name="dob"/>
+	    <field name="Registrationdate"/>
+	     <field name="Registrationfee"/>  
+	     <field name = "state"/>
+	     <field name="gender"/>
+	      <field name="add"/>
+	 
+        
+    </form>
+</field>
+</record>
+
+<!-- loan Action-->
+
+<record id="action_loan_loan" model="ir.actions.act_window">
+<field name='name'>loan Information</field>
+<field name='res_model'>cus.registration</field>
+<field name='view_type'>form</field>
+<field name='view_mode'>tree,form</field>
+</record>
+
+        
+	<!--loan Menu Item-->
+	<menuitem id="loan_parent" name="loan"/>
+	<menuitem id="menu_loan_parent" name="loan Management" parent="loan_parent"></menuitem> 
+        <menuitem action="action_loan_loan" id="menu_loan_loan" parent="menu_loan_parent"/>
+
+
+
+    </data>
+</openerp>
